@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">appDelivery</string>
+    <string name="btn">Calcular distancia en KM.</string>
+    <string name="menu">Seleccione una opcion.</string>
+    <string name="btnHacerPedido">Realize su pedido.</string>
+    <string name="btnCalcularDistancia">Calcule la distancia del envio en km.</string>
+    <string name="btnTotalEnvio">Revise el costo total de su pedido.</string>
+    <string name="txtLogin"> Iniciar Sesion.</string>
+    <string name="btnIngresar">Iniciar sesion.</string>
+    <string name="btnRegistrar">No tiene usuario? \nRegístrese aqui.</string>
+    <string name="placeholder">Ingrese su email.</string>
+    <string name="placeholder2">Ingrese su contraseña.</string>
+    <string name="txtRegistro">Ingrese un email y contraseña \npara registrarse.</string>
+    <string name="txtValidar">Confirme su contraseña.</string>
+    <string name="btnConfirmar">Registrar.</string>
+    <string name="btnVolver">Volver.</string>
+    <string name="title_activity_compra">CompraActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>

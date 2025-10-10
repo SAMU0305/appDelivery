@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9EBEB"
+    tools:context=".RegistroActivity">
+
+    <TextView
+        android:id="@+id/txtRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/txtRegistro"
+        android:textColor="#070607"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtRmail"
+        android:layout_width="241dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="184dp"
+        android:ems="10"
+        android:hint="@string/placeholder"
+        android:inputType="textEmailAddress"
+        android:textColor="#040303"
+        android:textColorHint="#070607"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtRcontrasenia"
+        android:layout_width="241dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/placeholder2"
+        android:inputType="textPassword"
+        android:textColor="#070607"
+        android:textColorHint="#070607"
+        app:layout_constraintEnd_toEndOf="@+id/txtRmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtRmail"
+        app:layout_constraintTop_toBottomOf="@+id/txtRmail" />
+
+    <EditText
+        android:id="@+id/txtVcontrasenia"
+        android:layout_width="241dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="416dp"
+        android:ems="10"
+        android:hint="@string/placeholder2"
+        android:inputType="textPassword"
+        android:textColor="#070607"
+        android:textColorHint="#070607"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtValidar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="360dp"
+        android:text="@string/txtValidar"
+        android:textColor="#070607"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnConfirmarRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="512dp"
+        android:backgroundTint="#03A9F4"
+        android:text="@string/btnConfirmar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
