@@ -12,7 +12,7 @@
         android:id="@+id/txtMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="68dp"
         android:text="@string/menu"
         android:textColor="#070707"
         android:textSize="34sp"
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginTop="188dp"
         android:layout_marginEnd="50dp"
         android:backgroundTint="#03A9F4"
         android:text="@string/btnHacerPedido"
@@ -39,11 +39,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="364dp"
+        android:layout_marginTop="264dp"
         android:layout_marginEnd="40dp"
         android:backgroundTint="#03A9F4"
         android:text="@string/btnCalcularDistancia"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.634"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="464dp"
+        android:layout_marginTop="396dp"
         android:layout_marginEnd="40dp"
         android:backgroundTint="#03A9F4"
         android:text="@string/btnTotalEnvio"
@@ -66,6 +67,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="536dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="312dp"
+        android:layout_height="193dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="476dp"
+        android:layout_marginEnd="25dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#050505"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

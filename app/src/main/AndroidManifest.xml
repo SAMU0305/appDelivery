@@ -17,16 +17,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppDelivery" >
         <activity
-            android:name=".CompraActivity"
+            android:name=".MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".CalcularDistanciaActivity"
+            android:name=".CompraActivity"
             android:exported="true" />
         <activity
             android:name=".RegistroActivity"
             android:exported="true" />
         <activity
-            android:name=".MenuActivity"
+            android:name=".CalcularDistanciaActivity"
             android:exported="true" />
 
 

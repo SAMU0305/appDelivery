@@ -9,17 +9,225 @@
     tools:context=".CompraActivity">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="244dp"
-        android:layout_marginEnd="40dp"
-        android:text="En Proceso..."
-        android:textColor="#040303"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        android:id="@+id/tvTitulo"
+        android:layout_width="247dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/tituloProductos"
+        android:textColor="#070606"
+        android:textColorHint="#090707"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <CheckBox
+        android:id="@+id/cbCarne"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:gravity="center"
+        android:text="@string/carne"
+        android:textColor="#090909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbCamarones"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="🦐 Camarones (kg)\n- $13.990"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbSalmon"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="🐟 Salmón Congelado (kg)\n- $15.990"
+        android:textColor="#090909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbCarne" />
+
+    <CheckBox
+        android:id="@+id/cbQueso"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="🧀 Queso Roquefort (kg)\n- $13.990"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbCamarones" />
+
+    <CheckBox
+        android:id="@+id/cbVino"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="🍷 Vino Chileno Reserva\n- $19.990"
+        android:textColor="#090909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbSalmon" />
+
+    <CheckBox
+        android:id="@+id/cbJamonSerrano"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="🥓 Jamón Serrano (kg)\n- $12.490"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbQueso" />
+
+    <CheckBox
+        android:id="@+id/cbJamon"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="🍖 Jamón Ibérico (kg)\n- $35.990"
+        android:textColor="#090909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbVino" />
+
+    <CheckBox
+        android:id="@+id/cbPollo"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="🍗 Pollo Orgánico (kg)\n- $7.990"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbJamonSerrano" />
+
+    <CheckBox
+        android:id="@+id/cbMariscosSurtidos"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="🦀 Mariscos Mixtos (kg)\n- $14.990"
+        android:textColor="#090909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbJamon" />
+
+    <CheckBox
+        android:id="@+id/cbPato"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="🦆 Pato (kg)\n- $18.990"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbPollo" />
+
+    <CheckBox
+        android:id="@+id/cbOstras"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="🦪 Ostras (12u)\n- $17.990"
+        android:textColor="#090909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbMariscosSurtidos" />
+
+    <CheckBox
+        android:id="@+id/cbLangosta"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="🦞 Langosta Premium (kg)\n- $42.990"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbPato" />
+
+    <CheckBox
+        android:id="@+id/cbTrufa"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="🍄 Trufa Blanca (50g)\n- $39.990"
+        android:textColor="#090909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbOstras" />
+
+    <CheckBox
+        android:id="@+id/cbCordero"
+        android:layout_width="176dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="🐑 Cordero (kg)\n- $21.990"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbLangosta" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="552dp"
+        android:backgroundTint="#03A9F4"
+        android:text="@string/btnTotal"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/totalCompra"
+        android:textColor="#2E7D32"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="150dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="660dp"
+        android:backgroundTint="#03A9F4"
+        android:text="@string/btnVolver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

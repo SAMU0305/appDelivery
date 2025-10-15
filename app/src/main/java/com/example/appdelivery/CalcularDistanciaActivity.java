@@ -1,5 +1,6 @@
 package com.example.appdelivery;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,6 +40,7 @@ public class CalcularDistanciaActivity extends AppCompatActivity implements  OnM
     private LatLng miUbicacion;
     private Marker marcadorActual;
     private Button btnCalcular;
+    private Button btnVolverAMenu;
 
 
 
@@ -56,6 +58,7 @@ public class CalcularDistanciaActivity extends AppCompatActivity implements  OnM
 
         btnCalcular = findViewById(R.id.btnCalcular);
         txtMostrar = findViewById(R.id.textView);
+        btnVolverAMenu = findViewById(R.id.btnVolverMenu);
         //fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
 
@@ -100,6 +103,23 @@ public class CalcularDistanciaActivity extends AppCompatActivity implements  OnM
 
 
         });
+
+
+        btnVolverAMenu.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intentMenu = new Intent(CalcularDistanciaActivity.this, MenuActivity.class);
+
+                startActivity(intentMenu);
+            }
+
+        });
+
+
+
+
     }
 
     @Override
@@ -110,16 +130,20 @@ public class CalcularDistanciaActivity extends AppCompatActivity implements  OnM
         // para creae el evento click en el mapa
         this.mMap.setOnMapClickListener(this);
 
+        // se crea una ubicaccion con las coordenadas establecidas
         plazaArmas = new LatLng(lat1, lon1);
 
+        // se crea un marcador con esa ubicacion
         mMap.addMarker(new MarkerOptions().position(plazaArmas).title("Bodega central"));
 
         if (marcadorActual != null) {
             marcadorActual.remove();
         }
 
-        miUbicacion = new LatLng(lat2, lon2);
 
+        // se crea la ubicacion actual con las coordenadas obtenidas
+        miUbicacion = new LatLng(lat2, lon2);
+        // se crea un marcador con la ubicacion actual
         marcadorActual = mMap.addMarker(new MarkerOptions().position(miUbicacion).title("Mi ubicación"));
 
 
@@ -130,16 +154,45 @@ public class CalcularDistanciaActivity extends AppCompatActivity implements  OnM
                 .build();
 
         // Centra y ajusta el zoom para mostrar ambas ubicaciones
-        mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, 300)); // padding 300 es el Margen en píxeles para que no queden pegadas al borde
+        mMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, 300)); // padding 300 es el Margen en píxeles para que
+                                                                                   // no queden pegadas al borde
 
 
 
     }
 
 
+    public static double calcularDistancia(double lat1, double lon1, double lat2, double lon2) {
+
+        final double R = 6371.0;
+        double latRad1 = Math.toRadians(lat1);
+        double latRad2 = Math.toRadians(lat2);
+        double deltaLat = Math.toRadians(lat2 - lat1);
+        double deltaLon = Math.toRadians(lon2 - lon1);
+
+        double a = Math.sin(deltaLat / 2) * Math.sin(deltaLat / 2) +
+                Math.cos(latRad1) * Math.cos(latRad2) *
+                        Math.sin(deltaLon / 2) * Math.sin(deltaLon / 2);
+
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return R * c;
+    }
 
 
-    // verifica permisos y obtiene la ubicación actual
+
+    @Override
+    public void onMapClick(@NonNull LatLng latLng) {
+
+    }
+
+
+
+}
+
+
+
+
+// verifica permisos y obtiene la ubicación actual
 
    /* private void getCurrentLocation() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
@@ -179,30 +232,3 @@ public class CalcularDistanciaActivity extends AppCompatActivity implements  OnM
 
         }*/
 
-
-
-    public static double calcularDistancia(double lat1, double lon1, double lat2, double lon2) {
-
-        final double R = 6371.0;
-        double latRad1 = Math.toRadians(lat1);
-        double latRad2 = Math.toRadians(lat2);
-        double deltaLat = Math.toRadians(lat2 - lat1);
-        double deltaLon = Math.toRadians(lon2 - lon1);
-
-        double a = Math.sin(deltaLat / 2) * Math.sin(deltaLat / 2) +
-                Math.cos(latRad1) * Math.cos(latRad2) *
-                        Math.sin(deltaLon / 2) * Math.sin(deltaLon / 2);
-
-        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        return R * c;
-    }
-
-
-
-    @Override
-    public void onMapClick(@NonNull LatLng latLng) {
-
-    }
-
-
-}
